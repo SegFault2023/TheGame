@@ -8,3 +8,4 @@ Using this repository-
   2. open the project through UnrealEditor by choosing "TheGame.uproject"
   3. rebuild missing files (Unreal Engine will prompt you to do this)
   4. work on project, push any changes, pull changes regularly~~~
+     *always use main branch
