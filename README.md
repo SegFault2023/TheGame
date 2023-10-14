@@ -8,7 +8,3 @@ Using this repository-
   2. open the project through UnrealEditor and choose "TheGame.uproject"
   3. rebuild missing files
   4. work on project~~~
-
-  *Please pull and push changes through the github desktop application
-
-another trial
