@@ -9,4 +9,4 @@ Using this repository-
   3. rebuild missing files
   4. work on project~~~
 
-this is a trial change
+  *Please pull and push changes through the github desktop application
