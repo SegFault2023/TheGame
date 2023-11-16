@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class ItemSlot : MonoBehaviour
 {
@@ -13,11 +14,15 @@ public class ItemSlot : MonoBehaviour
 
 
     //====ITEM SLOT====//
+    public GameObject selectedShader;
+    public bool thisItemSelected;
+    
    
 
     [SerializeField]
     private Image itemImage;
 
+  
 
     public void AddItem(string itemName, Sprite itemSprite)
     {

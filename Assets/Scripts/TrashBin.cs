@@ -14,7 +14,7 @@ public class TrashBin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
     // Update is called once per frame
