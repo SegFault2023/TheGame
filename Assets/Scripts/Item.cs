@@ -28,7 +28,7 @@ public class Item : MonoBehaviour
         {
             Boolean is_added = inventoryManager.AddItem(itemName, sprite, this.tag);
 
-            if(is_added) { Destroy(gameObject); }
+            if(is_added) { Destroy(gameObject, 0.1f); }
 
         }
     }
