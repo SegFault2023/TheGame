@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Item '
       objectReference: {fileID: 0}
+    - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
+      propertyPath: m_TagString
+      value: PickupElement
+      objectReference: {fileID: 0}
     - target: {fileID: 7521114144134407908, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -607,6 +611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
+      propertyPath: m_TagString
+      value: PickupElement
+      objectReference: {fileID: 0}
     - target: {fileID: 7521114144134407908, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -921,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item  (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
+      propertyPath: m_TagString
+      value: PickupElement
+      objectReference: {fileID: 0}
     - target: {fileID: 7521114144134407908, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -981,6 +993,10 @@ PrefabInstance:
     - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_Name
       value: Item  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
+      propertyPath: m_TagString
+      value: PickupElement
       objectReference: {fileID: 0}
     - target: {fileID: 7521114144134407908, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_IsTrigger
@@ -1353,6 +1369,10 @@ PrefabInstance:
     - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_Name
       value: Item  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231687004295009921, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
+      propertyPath: m_TagString
+      value: PickupElement
       objectReference: {fileID: 0}
     - target: {fileID: 7521114144134407908, guid: e007d99c4c96de945aef1c8a04c2fd88, type: 3}
       propertyPath: m_IsTrigger
