@@ -22,7 +22,12 @@ public class TrashBin : MonoBehaviour
     {
         if(can_get_trash == true && Input.GetKeyDown(KeyCode.C) && numberOfTrashes < maxTrashLimit)
         {
-            
+            int slotToBeRemoved = inventoryManager.getSelectedIndex();
+            if (slotToBeRemoved != -1 && inventoryManager.compareTrashBinTags(this.tag, slotToBeRemoved))
+            {
+                inventoryManager.RemoveItem(slotToBeRemoved);
+                numberOfTrashes++;
+            }
         }
         
     }

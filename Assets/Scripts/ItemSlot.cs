@@ -22,9 +22,11 @@ public class ItemSlot : MonoBehaviour
     [SerializeField]
     private Image itemImage;
 
+    public String getItemImageTag() {  return itemImage.tag; }
+
   
 
-    public void AddItem(string itemName, Sprite itemSprite)
+    public void AddItem(string itemName, Sprite itemSprite, string itemTag)
     {
         this.itemName = itemName;
         this.itemSprite = itemSprite;
@@ -32,7 +34,16 @@ public class ItemSlot : MonoBehaviour
     
         itemImage.sprite = itemSprite;
         itemImage.enabled = true;
+        itemImage.tag = itemTag;
     }
 
+    public void RemoveItem()
+    {
+        //this.itemSprite = itemSprite;
+        isFull = false;
 
+        //itemImage.sprite = itemSprite;
+        itemImage.enabled = false;
+
+    }
 }

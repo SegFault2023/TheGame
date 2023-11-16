@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
     {
         if(can_be_picked == true && Input.GetKeyDown(KeyCode.X))
         {
-            Boolean is_added = inventoryManager.AddItem(itemName, sprite);
+            Boolean is_added = inventoryManager.AddItem(itemName, sprite, this.tag);
 
             if(is_added) { Destroy(gameObject); }
 

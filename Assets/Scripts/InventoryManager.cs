@@ -12,20 +12,22 @@ public class InventoryManager : MonoBehaviour
     private Boolean isAnItemSelected = false;
     private float shaderSelectedTime;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    public Boolean compareTrashBinTags(String binTag, int index)
     {
-
+        if (itemSlot[index].getItemImageTag() == binTag) { return true; }
+        return false;
     }
 
-    private void KeyCheck(KeyCode key)
-    {
 
-        SelectSlot(key);
-        shaderSelectedTime = Time.time;
+    public int getSelectedIndex() 
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (itemSlot[i].thisItemSelected) return i;
+        }
+        return -1;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -45,12 +47,14 @@ public class InventoryManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.N))
         {
-            KeyCheck(KeyCode.N);
+            SelectSlot(KeyCode.N);
+            shaderSelectedTime = Time.time;
         }
 
         if (Input.GetKeyDown(KeyCode.M))
         {
-            KeyCheck(KeyCode.M);
+            SelectSlot(KeyCode.M);
+            shaderSelectedTime = Time.time;
         }
 
         if (isAnItemSelected && Time.time >= shaderSelectedTime + 4)
@@ -59,18 +63,24 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public Boolean AddItem(string itemName, Sprite itemSprite)
+    public Boolean AddItem(string itemName, Sprite itemSprite, String itemTag)
     {
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].isFull == false)
             {
-                itemSlot[i].AddItem(itemName, itemSprite);
+                itemSlot[i].AddItem(itemName, itemSprite, itemTag);
                 return true;
             }
         }
 
         return false;
+    }
+
+    public void RemoveItem(int index)
+    {
+
+        itemSlot[index].RemoveItem();
     }
 
     public void DeselectAllSlots()
@@ -86,9 +96,7 @@ public class InventoryManager : MonoBehaviour
     public void SelectSlot(KeyCode key)
     {
         int indexToBeSelected = 0;
-        Boolean flag = false;
         
-
         for (int i = 0; i < itemSlot.Length; i++)
         {
             if (itemSlot[i].thisItemSelected)
@@ -125,24 +133,18 @@ public class InventoryManager : MonoBehaviour
 
                 itemSlot[indexToBeSelected].selectedShader.SetActive(true);
                 itemSlot[indexToBeSelected].thisItemSelected = true;
-                flag = true;
 
-                Debug.Log(i);
-                Debug.Log(indexToBeSelected);
-                break;
+
+                return;
             }
 
         }
 
-        if(!flag)
-        {
-            itemSlot[0].selectedShader.SetActive(true);
-            itemSlot[0].thisItemSelected = true;
-            isAnItemSelected = true;
-        }
-     
-
+       
+        itemSlot[0].selectedShader.SetActive(true);
+        itemSlot[0].thisItemSelected = true;
+        isAnItemSelected = true;
+        
     }
-
 
 }
