@@ -65,7 +65,6 @@ public class InventoryManager : MonoBehaviour
         {
             if (itemSlot[i].thisItemSelected)
             {
-                Debug.Log(i.ToString());
                 return i;
             }
         }
