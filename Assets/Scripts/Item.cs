@@ -30,11 +30,11 @@ public class Item : MonoBehaviour
         if(can_be_picked == true && Input.GetKeyDown(KeyCode.X))
         {
             Boolean is_added = inventoryManager.AddItem(itemName, quantity, sprite);
-
-            if(is_added) { Destroy(gameObject); }
+            if(is_added) { Destroy(gameObject, 0.1f); }
 
         }
     }
+
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,7 +45,6 @@ public class Item : MonoBehaviour
         }
     }
 
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -53,5 +52,6 @@ public class Item : MonoBehaviour
             can_be_picked = false;
         }
     }
+
 
 }

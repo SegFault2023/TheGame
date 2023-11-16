@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public ContactFilter2D movementFilter; // Setting for object to collide
     public float collisionOffset = 0.05f; // Offset
 
+
     private List<RaycastHit2D> castCollision = new List<RaycastHit2D>(); // List the collision block
     private Vector2 lastMovedDirection;
     private Vector2 input;
@@ -68,6 +69,8 @@ public class Player : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         pickFlag = anim.GetBool("PickUp");
+
+
 
         if (Input.GetKeyDown(KeyCode.X) && can_be_picked)
         {
@@ -127,7 +130,6 @@ public class Player : MonoBehaviour
         anim.SetBool("PickUp", pickFlag);
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PickupElement")
@@ -144,5 +146,6 @@ public class Player : MonoBehaviour
             can_be_picked = false;
         }
     }
+
 
 }
