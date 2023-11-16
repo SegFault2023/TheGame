@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - PickupElement
+  - TrashType1
+  - TrashType2
+  - TrashType3
+  - TrashType4
+  - BinType1
   layers:
   - Default
   - TransparentFX

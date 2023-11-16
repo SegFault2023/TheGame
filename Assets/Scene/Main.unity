@@ -1192,9 +1192,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1987834634}
   - component: {fileID: 1987834633}
+  - component: {fileID: 1987834635}
   m_Layer: 0
   m_Name: BinType1
-  m_TagString: Untagged
+  m_TagString: BinType1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1260,6 +1261,18 @@ Transform:
   - {fileID: 976777867}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987834635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987834632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c279f0538a2d1574d9327a1629ac54b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2073583416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,6 +1340,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2500785434243569854, guid: 09082785cec13f44596704ad6c521a49, type: 3}
       propertyPath: m_Name
+      value: TrashType4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500785434243569854, guid: 09082785cec13f44596704ad6c521a49, type: 3}
+      propertyPath: m_TagString
       value: TrashType4
       objectReference: {fileID: 0}
     - target: {fileID: 6703592606283190177, guid: 09082785cec13f44596704ad6c521a49, type: 3}

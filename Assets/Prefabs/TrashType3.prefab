@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8672933595198126760}
   m_Layer: 0
   m_Name: TrashType3
-  m_TagString: Untagged
+  m_TagString: TrashType3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: PickupElement
-  quantity: 1
   sprite: {fileID: 21300000, guid: 7e762211ba5cd45e9a7bf7597b9f897e, type: 3}
 --- !u!1 &7164912841433697296
 GameObject:

@@ -9,9 +9,6 @@ public class Item : MonoBehaviour
     private string itemName;
 
     [SerializeField]
-    private int quantity;
-
-    [SerializeField]
     private Sprite sprite;
 
     private bool can_be_picked = false;
@@ -29,7 +26,7 @@ public class Item : MonoBehaviour
     {
         if(can_be_picked == true && Input.GetKeyDown(KeyCode.X))
         {
-            Boolean is_added = inventoryManager.AddItem(itemName, quantity, sprite);
+            Boolean is_added = inventoryManager.AddItem(itemName, sprite);
 
             if(is_added) { Destroy(gameObject); }
 

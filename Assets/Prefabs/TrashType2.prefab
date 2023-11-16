@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5624446155885704104}
   m_Layer: 0
   m_Name: TrashType2
-  m_TagString: Untagged
+  m_TagString: TrashType2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.07, y: 0.411, z: -0.033126935}
-  m_LocalScale: {x: 0.018516583, y: 0.02207338, z: 1}
+  m_LocalScale: {x: 0.018889, y: 0.018889, z: 0.018889}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8339948977074774788}
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0417533, y: -0.5865455}
+  m_Offset: {x: -0.088519335, y: 0.28731918}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.11817932, y: 0.24665284}
+  m_Size: {x: 5.066364, y: 11.606895}
   m_EdgeRadius: 0
 --- !u!114 &5624446155885704104
 MonoBehaviour:
@@ -176,5 +176,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: PickupElement
-  quantity: 1
   sprite: {fileID: 21300000, guid: 8b924f32e023a4f179c4dce79289033a, type: 3}
