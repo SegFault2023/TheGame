@@ -12,21 +12,8 @@ public class InventoryManager : MonoBehaviour
     private Boolean isAnItemSelected = false;
     private float shaderSelectedTime;
 
-    public Boolean compareTrashBinTags(String binTag, int index)
-    {
-        if (itemSlot[index].getItemImageTag() == binTag) { return true; }
-        return false;
-    }
-
-
-    public int getSelectedIndex() 
-    {
-        for (int i = 0; i < itemSlot.Length; i++)
-        {
-            if (itemSlot[i].thisItemSelected) return i;
-        }
-        return -1;
-    }
+    [SerializeField]
+    private int slotActiveTime = 6;
 
 
     // Update is called once per frame
@@ -44,7 +31,6 @@ public class InventoryManager : MonoBehaviour
             menuActivated = true;
         }
 
-
         if (Input.GetKeyDown(KeyCode.N))
         {
             SelectSlot(KeyCode.N);
@@ -57,11 +43,35 @@ public class InventoryManager : MonoBehaviour
             shaderSelectedTime = Time.time;
         }
 
-        if (isAnItemSelected && Time.time >= shaderSelectedTime + 4)
+        if (isAnItemSelected && Time.time >= shaderSelectedTime + slotActiveTime)
         {
             DeselectAllSlots();
         }
     }
+
+    public Boolean compareTrashBinTags(String binTag, int index)
+    {
+        if (itemSlot[index].getItemImageTag() == "TrashType1" && binTag == "BinType1") { return true; }
+        else if (itemSlot[index].getItemImageTag() == "TrashType2" && binTag == "BinType2") { return true; }
+        else if (itemSlot[index].getItemImageTag() == "TrashType3" && binTag == "BinType3") { return true; }
+        else if (itemSlot[index].getItemImageTag() == "TrashType4" && binTag == "BinType4") { return true; }
+
+        return false;
+    }
+
+    public int getSelectedIndex()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (itemSlot[i].thisItemSelected)
+            {
+                Debug.Log(i.ToString());
+                return i;
+            }
+        }
+        return -1;
+    }
+
 
     public Boolean AddItem(string itemName, Sprite itemSprite, String itemTag)
     {
@@ -79,7 +89,6 @@ public class InventoryManager : MonoBehaviour
 
     public void RemoveItem(int index)
     {
-
         itemSlot[index].RemoveItem();
     }
 

@@ -7,6 +7,8 @@ public class TrashBin : MonoBehaviour
 {
     private Boolean can_get_trash = false;
     private int numberOfTrashes = 0;
+
+    [SerializeField]
     private int maxTrashLimit = 4;
 
     private InventoryManager inventoryManager;
@@ -20,9 +22,11 @@ public class TrashBin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(can_get_trash == true && Input.GetKeyDown(KeyCode.C) && numberOfTrashes < maxTrashLimit)
+        if(can_get_trash && Input.GetKeyDown(KeyCode.C) && (numberOfTrashes < maxTrashLimit))
         {
             int slotToBeRemoved = inventoryManager.getSelectedIndex();
+            
+            
             if (slotToBeRemoved != -1 && inventoryManager.compareTrashBinTags(this.tag, slotToBeRemoved))
             {
                 inventoryManager.RemoveItem(slotToBeRemoved);

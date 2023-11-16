@@ -10,6 +10,9 @@ TagManager:
   - TrashType3
   - TrashType4
   - BinType1
+  - BinType3
+  - BinType2
+  - BinType4
   layers:
   - Default
   - TransparentFX

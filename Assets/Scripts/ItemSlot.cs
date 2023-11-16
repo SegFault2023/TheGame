@@ -9,7 +9,6 @@ public class ItemSlot : MonoBehaviour
 {
     //=====ITEM DATA=====//
     public string itemName;
-    public Sprite itemSprite;
     public bool isFull;
 
 
@@ -29,7 +28,6 @@ public class ItemSlot : MonoBehaviour
     public void AddItem(string itemName, Sprite itemSprite, string itemTag)
     {
         this.itemName = itemName;
-        this.itemSprite = itemSprite;
         isFull = true;
     
         itemImage.sprite = itemSprite;
@@ -39,11 +37,9 @@ public class ItemSlot : MonoBehaviour
 
     public void RemoveItem()
     {
-        //this.itemSprite = itemSprite;
         isFull = false;
 
-        //itemImage.sprite = itemSprite;
         itemImage.enabled = false;
-
+        itemImage.tag = "Untagged";
     }
 }
