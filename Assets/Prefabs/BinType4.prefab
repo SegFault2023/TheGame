@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.3, y: 0, z: 0.036150154}
-  m_LocalScale: {x: 1.0442, y: 1.0442, z: 1.0442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3750531828871388319}
@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3750531828871388319}
   - component: {fileID: 305187246860477077}
   - component: {fileID: 5711588717667276542}
+  - component: {fileID: 4705248180467762299}
   m_Layer: 0
   m_Name: BinType4
   m_TagString: BinType4
@@ -111,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 7022488723005561375}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1864128, y: 0.5109881, z: 0.046325523}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.038890786, y: 0.038890786, z: 0.038890786}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176,3 +177,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTrashLimit: 4
+--- !u!95 &4705248180467762299
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022488723005561375}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

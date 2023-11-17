@@ -5,8 +5,11 @@ using UnityEngine;
 
 public class TrashBin : MonoBehaviour
 {
+    Animator anim;
+
     private Boolean can_get_trash = false;
     private int numberOfTrashes = 0;
+
 
     [SerializeField]
     private int maxTrashLimit = 4;
@@ -16,6 +19,7 @@ public class TrashBin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
@@ -25,15 +29,15 @@ public class TrashBin : MonoBehaviour
         if(can_get_trash && Input.GetKeyDown(KeyCode.C) && (numberOfTrashes < maxTrashLimit))
         {
             int slotToBeRemoved = inventoryManager.getSelectedIndex();
-            
-            
+            anim.SetBool("ButtonPressed", true);
+
             if (slotToBeRemoved != -1 && inventoryManager.compareTrashBinTags(this.tag, slotToBeRemoved))
             {
                 inventoryManager.RemoveItem(slotToBeRemoved);
                 numberOfTrashes++;
             }
         }
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +45,7 @@ public class TrashBin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             can_get_trash = true;
+            
         }
     }
 
