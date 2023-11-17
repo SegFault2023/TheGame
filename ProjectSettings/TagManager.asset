@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PickupElement
+  - TrashType1
+  - TrashType2
+  - TrashType3
+  - TrashType4
+  - BinType1
+  - BinType3
+  - BinType2
+  - BinType4
   layers:
   - Default
   - TransparentFX
