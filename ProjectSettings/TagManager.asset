@@ -47,6 +47,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 1036164845
+    locked: 0
+  - name: city objects
+    uniqueID: 2426914089
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
