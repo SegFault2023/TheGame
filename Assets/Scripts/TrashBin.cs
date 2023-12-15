@@ -16,6 +16,10 @@ public class TrashBin : MonoBehaviour
 
     private InventoryManager inventoryManager;
     private GameObject selectedBin;
+
+    [SerializeField]
+    public float swapDelayInSeconds = 2f;
+
    
 
 
@@ -24,6 +28,8 @@ public class TrashBin : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+
+
     }
 
     // Update is called once per frame
@@ -39,7 +45,9 @@ public class TrashBin : MonoBehaviour
                 inventoryManager.RemoveItem(slotToBeRemoved);
                 numberOfTrashes++;
 
-                changeBinLocations();
+
+                Invoke(nameof(changeBinLocations), swapDelayInSeconds);
+                
             }
         }
 
