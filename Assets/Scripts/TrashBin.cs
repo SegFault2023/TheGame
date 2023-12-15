@@ -15,6 +15,9 @@ public class TrashBin : MonoBehaviour
     private int maxTrashLimit = 4;
 
     private InventoryManager inventoryManager;
+    private GameObject selectedBin;
+   
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +38,13 @@ public class TrashBin : MonoBehaviour
             {
                 inventoryManager.RemoveItem(slotToBeRemoved);
                 numberOfTrashes++;
+
+                changeBinLocations();
             }
         }
 
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -57,4 +63,52 @@ public class TrashBin : MonoBehaviour
             can_get_trash = false;
         }
     }
+
+    private void changeBinLocations()
+    {
+        string[] trashBinTags = { "BinType1", "BinType2", "BinType3", "BinType4" };
+        string currentBinTag = gameObject.tag;
+        string selectedTag = currentBinTag;
+
+
+        while (selectedTag == currentBinTag)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, trashBinTags.Length); //generate 0-1-2-3
+            selectedTag = trashBinTags[randomIndex];
+        }
+
+        Debug.Log("currentBinTag: " + currentBinTag);
+        Debug.Log("selectedTag: " + selectedTag);
+
+        selectedBin = GameObject.FindWithTag(selectedTag);
+
+        Debug.Log("gameObject: " + gameObject.name);
+        Debug.Log("selectedBin: " + (selectedBin != null ? selectedBin.name : "null"));
+
+        if (selectedBin != null)
+        {
+
+            // Get the location of the selectedBin
+            Vector2 selectedBinLocation = selectedBin.transform.position;
+            Vector2 currentBinLocation = gameObject.transform.position;
+
+            // Assign the location to the current gameObject
+            transform.position = selectedBinLocation;
+
+            // Assign the current gameObject's location to the selectedBin
+            selectedBin.transform.position = currentBinLocation;
+
+
+
+           
+
+        }
+
+
+    }
+
+    //put trashbin1, trashbin2... names in an array, 
+    // Get the GameObject attached to this script, get its tag
+    // select an item in array randomly, if it is not the same name as the current bin, create that gameobject and currect gameobject become that one.
+    // if it is the same current bin tag name, loop until it is not.
 }
