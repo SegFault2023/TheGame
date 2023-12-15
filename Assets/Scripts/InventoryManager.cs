@@ -124,39 +124,33 @@ public class InventoryManager : MonoBehaviour
 
                 itemSlot[i].selectedShader.SetActive(false);
                 itemSlot[i].thisItemSelected = false;
-
-                if (key == KeyCode.Alpha1)
-                { 
-                    indexToBeSelected = 0;       
-                }
-
-                else if (key == KeyCode.Alpha2)
-                {
-                    indexToBeSelected = 1;          
-                }
-
-                else if (key == KeyCode.Alpha3)
-                {
-                    indexToBeSelected = 2;
-                }
-
-                else if (key == KeyCode.Alpha4)
-                {
-                    indexToBeSelected = 3;
-                }
-
-                itemSlot[indexToBeSelected].selectedShader.SetActive(true);
-                itemSlot[indexToBeSelected].thisItemSelected = true;
-
-
-                return;
+                break;
             }
-
         }
 
-       
-        itemSlot[0].selectedShader.SetActive(true);
-        itemSlot[0].thisItemSelected = true;
+        if (key == KeyCode.Alpha1)
+        { 
+            indexToBeSelected = 0;       
+        }
+
+        else if (key == KeyCode.Alpha2)
+        {
+            indexToBeSelected = 1;          
+        }
+
+        else if (key == KeyCode.Alpha3)
+        {
+            indexToBeSelected = 2;
+        }
+
+        else if (key == KeyCode.Alpha4)
+        {
+            indexToBeSelected = 3;
+        }
+
+
+        itemSlot[indexToBeSelected].selectedShader.SetActive(true);
+        itemSlot[indexToBeSelected].thisItemSelected = true;
         isAnItemSelected = true;
         
     }

@@ -15,10 +15,11 @@ public class TrashBin : MonoBehaviour
     private int maxTrashLimit = 4;
 
     private InventoryManager inventoryManager;
+    public ScoreManager scoreManager;
     private GameObject selectedBin;
 
     [SerializeField]
-    public float swapDelayInSeconds = 2f;
+    public float swapDelayInSeconds = 0.6f;
 
    
 
@@ -28,7 +29,7 @@ public class TrashBin : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
-
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
     }
 
@@ -40,15 +41,24 @@ public class TrashBin : MonoBehaviour
             int slotToBeRemoved = inventoryManager.getSelectedIndex();
             anim.SetBool("ButtonPressed", true);
 
-            if (slotToBeRemoved != -1 && inventoryManager.compareTrashBinTags(this.tag, slotToBeRemoved))
+            if(slotToBeRemoved != -1)
             {
-                inventoryManager.RemoveItem(slotToBeRemoved);
-                numberOfTrashes++;
+                if(inventoryManager.compareTrashBinTags(this.tag, slotToBeRemoved))
+                {
+                    inventoryManager.RemoveItem(slotToBeRemoved);
+                    numberOfTrashes++;
 
 
-                Invoke(nameof(changeBinLocations), swapDelayInSeconds);
-                
+                    Invoke(nameof(changeBinLocations), swapDelayInSeconds);
+                    scoreManager.incrementScore();
+                }
+
+                else
+                {
+                    scoreManager.decrementScore();
+                }
             }
+
         }
 
     }
@@ -85,13 +95,7 @@ public class TrashBin : MonoBehaviour
             selectedTag = trashBinTags[randomIndex];
         }
 
-        Debug.Log("currentBinTag: " + currentBinTag);
-        Debug.Log("selectedTag: " + selectedTag);
-
         selectedBin = GameObject.FindWithTag(selectedTag);
-
-        Debug.Log("gameObject: " + gameObject.name);
-        Debug.Log("selectedBin: " + (selectedBin != null ? selectedBin.name : "null"));
 
         if (selectedBin != null)
         {
@@ -107,16 +111,9 @@ public class TrashBin : MonoBehaviour
             selectedBin.transform.position = currentBinLocation;
 
 
-
-           
-
         }
 
 
     }
 
-    //put trashbin1, trashbin2... names in an array, 
-    // Get the GameObject attached to this script, get its tag
-    // select an item in array randomly, if it is not the same name as the current bin, create that gameobject and currect gameobject become that one.
-    // if it is the same current bin tag name, loop until it is not.
 }
