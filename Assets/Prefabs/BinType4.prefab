@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779219770118338498}
   - component: {fileID: 3128071666836103797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 305187246860477077}
   - component: {fileID: 5711588717667276542}
   - component: {fileID: 4705248180467762299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BinType4
   m_TagString: BinType4
   m_Icon: {fileID: 0}
@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTrashLimit: 4
+  scoreManager: {fileID: 0}
+  swapDelayInSeconds: 0.6
 --- !u!95 &4705248180467762299
 Animator:
   serializedVersion: 5
