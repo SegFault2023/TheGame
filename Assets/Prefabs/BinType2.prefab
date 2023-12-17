@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3651437319663391726}
   - component: {fileID: 2580940903999076360}
   - component: {fileID: -3861609466340003921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BinType2
   m_TagString: BinType2
   m_Icon: {fileID: 0}
@@ -93,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTrashLimit: 4
+  scoreManager: {fileID: 0}
+  swapDelayInSeconds: 0.6
 --- !u!95 &-3861609466340003921
 Animator:
   serializedVersion: 5
@@ -124,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5767974099429012563}
   - component: {fileID: 7979165913912984796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
