@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 588849555413518930}
   - component: {fileID: 5962760313788107539}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 674243504590071112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.036150154}
-  m_LocalScale: {x: 1.0442, y: 1.0442, z: 1.0442}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6843481655798010267}
@@ -95,7 +95,8 @@ GameObject:
   - component: {fileID: 6843481655798010267}
   - component: {fileID: 7323082352933841303}
   - component: {fileID: 6529838162869245239}
-  m_Layer: 0
+  - component: {fileID: 6165767861954943572}
+  m_Layer: 6
   m_Name: BinType1
   m_TagString: BinType1
   m_Icon: {fileID: 0}
@@ -110,8 +111,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5182617291463708372}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47, y: 1.055, z: -0.0014059}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.038890786, y: 0.038890786, z: 0.038890786}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -150,18 +151,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10751438, y: -0.6225388}
+  m_Offset: {x: -0.1, y: -0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 10, y: 10}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.0624866, y: 7.487593}
+  m_Size: {x: 5, y: 7.5}
   m_EdgeRadius: 0
 --- !u!114 &6529838162869245239
 MonoBehaviour:
@@ -175,3 +176,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c279f0538a2d1574d9327a1629ac54b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxTrashLimit: 4
+  scoreManager: {fileID: 0}
+  swapDelayInSeconds: 0.6
+--- !u!95 &6165767861954943572
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182617291463708372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c75876121d7e94c6e99ddb08801f8a46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

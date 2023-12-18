@@ -31,15 +31,27 @@ public class InventoryManager : MonoBehaviour
             menuActivated = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SelectSlot(KeyCode.N);
+            SelectSlot(KeyCode.Alpha1);
             shaderSelectedTime = Time.time;
         }
 
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SelectSlot(KeyCode.M);
+            SelectSlot(KeyCode.Alpha2);
+            shaderSelectedTime = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SelectSlot(KeyCode.Alpha3);
+            shaderSelectedTime = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SelectSlot(KeyCode.Alpha4);
             shaderSelectedTime = Time.time;
         }
 
@@ -112,45 +124,33 @@ public class InventoryManager : MonoBehaviour
 
                 itemSlot[i].selectedShader.SetActive(false);
                 itemSlot[i].thisItemSelected = false;
-
-                if (key == KeyCode.N)
-                {
-                    if (i == 0)
-                    {
-                        indexToBeSelected = itemSlot.Length - 1;
-                    }
-
-                    else
-                    {
-                        indexToBeSelected = i - 1;
-                    }
-                }
-
-                else if (key == KeyCode.M)
-                {
-                    if (i == itemSlot.Length - 1)
-                    {
-                        indexToBeSelected = 0;
-                    }
-
-                    else
-                    {
-                        indexToBeSelected = i + 1;
-                    }
-                }
-
-                itemSlot[indexToBeSelected].selectedShader.SetActive(true);
-                itemSlot[indexToBeSelected].thisItemSelected = true;
-
-
-                return;
+                break;
             }
-
         }
 
-       
-        itemSlot[0].selectedShader.SetActive(true);
-        itemSlot[0].thisItemSelected = true;
+        if (key == KeyCode.Alpha1)
+        { 
+            indexToBeSelected = 0;       
+        }
+
+        else if (key == KeyCode.Alpha2)
+        {
+            indexToBeSelected = 1;          
+        }
+
+        else if (key == KeyCode.Alpha3)
+        {
+            indexToBeSelected = 2;
+        }
+
+        else if (key == KeyCode.Alpha4)
+        {
+            indexToBeSelected = 3;
+        }
+
+
+        itemSlot[indexToBeSelected].selectedShader.SetActive(true);
+        itemSlot[indexToBeSelected].thisItemSelected = true;
         isAnItemSelected = true;
         
     }
