@@ -7,11 +7,11 @@ public class Login : MonoBehaviour
 {
     public void SignUp()
     {
-        SceneManager.LoadSceneAsync(3);
+        SceneManager.LoadSceneAsync(4);
     }
 
     public void LogIn()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(3);
     }
 }

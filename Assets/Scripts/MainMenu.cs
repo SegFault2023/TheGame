@@ -10,8 +10,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadSceneAsync(1);
     }
 
-    public void LoginSigun()
+    public void LoginSignup()
     {
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(3);
     }
 }
