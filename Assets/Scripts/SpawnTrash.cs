@@ -39,13 +39,13 @@ public class SpawnTrash : MonoBehaviour
 
             Collider2D Collision = Physics2D.OverlapArea(colliderPointA, colliderPointB, layerList);
 
-            Debug.Log(xCol +  " / " +yCol + "\t" + colliderPointA + " / " + colliderPointB);
 
 
             if (Collision == false)
             {
 
                 Instantiate(trash, spawnPoint, Quaternion.identity);
+
                 count++;
             }
 

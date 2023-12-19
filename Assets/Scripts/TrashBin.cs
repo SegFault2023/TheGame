@@ -55,7 +55,10 @@ public class TrashBin : MonoBehaviour
 
                 else
                 {
-                    scoreManager.decrementScore();
+                    if (inventoryManager.itemSlot[slotToBeRemoved].isFull)
+                    {
+                        scoreManager.decrementScore();
+                    }
                 }
             }
 
