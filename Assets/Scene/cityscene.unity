@@ -442,11 +442,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2536814337522340152, guid: ac1034e8f0bae450987b7ad61053d12c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.28
+      value: 2.63
       objectReference: {fileID: 0}
     - target: {fileID: 2536814337522340152, guid: ac1034e8f0bae450987b7ad61053d12c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5606
+      value: 4.87
       objectReference: {fileID: 0}
     - target: {fileID: 2536814337522340152, guid: ac1034e8f0bae450987b7ad61053d12c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1515,9 +1515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0834270a26d492b8a064b2ed66249c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothing: 0.07
   player: {fileID: 271234496}
-  boundX: 0.15
-  boundY: 0.05
+  minPosition: {x: -9, y: -12}
+  maxPosition: {x: 18, y: 20}
 --- !u!81 &602841674
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1561,7 +1562,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1586,7 +1587,7 @@ Transform:
   m_GameObject: {fileID: 602841672}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 2.2, y: 2.79, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
